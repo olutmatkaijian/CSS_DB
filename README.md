@@ -28,4 +28,10 @@ Explanation:
 This system is static and lacks interactivity or actual query logic—tasks better suited for JavaScript or server-side languages. But it creatively uses CSS selectors to approximate "queries" in a visual, declarative way.
 ```
 
-See the appropriate html file in this repo. And explanation.md for an explanation of why this is not a smart way to do things according to the glorious neural engine. 
+See the appropriate html file in this repo. And explanation.md for an [explanation](Explanation.md) of why this is not a smart way to do things according to the glorious neural engine. 
+
+# Should one be using AI for this stuff?
+Probably not but it was a fun experiment. There's most definitly better uses for AI than this.
+
+# I sent this to X and now they're mad, what do I do?
+That's your own fault and I have no answer to that. 
