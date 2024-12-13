@@ -1,5 +1,5 @@
 # CSS_DB
-Incredibly stupid thing inspired by a YouTube short. 
+This is a joke repository. Use at your own risk.
 
 [Inspired by this YouTube short](https://www.youtube.com/shorts/mAvWBub8Ycc)
 
@@ -28,4 +28,4 @@ Explanation:
 This system is static and lacks interactivity or actual query logic—tasks better suited for JavaScript or server-side languages. But it creatively uses CSS selectors to approximate "queries" in a visual, declarative way.
 ```
 
-See the appropriate html file in this repo. 
+See the appropriate html file in this repo. And explanation.md for an explanation of why this is not a smart way to do things according to the glorious neural engine. 
