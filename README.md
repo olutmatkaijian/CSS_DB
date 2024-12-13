@@ -35,3 +35,6 @@ Probably not but it was a fun experiment. There's most definitly better uses for
 
 # I sent this to X and now they're mad, what do I do?
 That's your own fault and I have no answer to that. 
+
+# Contributin
+Sure thing but why the hell would you even consider to want to do this to yourself?
