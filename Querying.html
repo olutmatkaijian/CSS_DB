@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Database</title>
+    <style>
+        /* Simulating table rows */
+        .record {
+            display: none; /* Default state */
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Querying based on "data-*" attributes */
+        .record[data-category].visible {
+            display: block;
+        }
+
+        [data-category="fruit"] {
+            background-color: #f9f9d1;
+        }
+
+        [data-category="vegetable"] {
+            background-color: #d1f9d1;
+        }
+
+        /* Styling based on another "field" */
+        [data-category="fruit"][data-color="red"] {
+            border-color: red;
+        }
+
+        [data-category="vegetable"][data-color="green"] {
+            border-color: green;
+        }
+
+        /* Filtering pseudo-class example */
+        .record:nth-child(2n) {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Database Simulation</h1>
+
+<div>
+    <label for="category">Category:</label>
+    <select id="category">
+        <option value="">-- Select Category --</option>
+        <option value="fruit">Fruit</option>
+        <option value="vegetable">Vegetable</option>
+    </select>
+
+    <label for="color">Color:</label>
+    <select id="color">
+        <option value="">-- Select Color --</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+    </select>
+</div>
+
+<div class="record" data-category="fruit" data-color="red">
+    <strong>Name:</strong> Apple<br>
+    <strong>Category:</strong> Fruit<br>
+    <strong>Color:</strong> Red
+</div>
+
+<div class="record" data-category="vegetable" data-color="green">
+    <strong>Name:</strong> Broccoli<br>
+    <strong>Category:</strong> Vegetable<br>
+    <strong>Color:</strong> Green
+</div>
+
+<div class="record" data-category="fruit" data-color="yellow">
+    <strong>Name:</strong> Banana<br>
+    <strong>Category:</strong> Fruit<br>
+    <strong>Color:</strong> Yellow
+</div>
+
+<div class="record" data-category="vegetable" data-color="orange">
+    <strong>Name:</strong> Carrot<br>
+    <strong>Category:</strong> Vegetable<br>
+    <strong>Color:</strong> Orange
+</div>
+
+<script>
+    const categoryFilter = document.getElementById('category');
+    const colorFilter = document.getElementById('color');
+
+    function applyFilters() {
+        const category = categoryFilter.value;
+        const color = colorFilter.value;
+
+        document.querySelectorAll('.record').forEach(record => {
+            const matchesCategory = !category || record.dataset.category === category;
+            const matchesColor = !color || record.dataset.color === color;
+
+            if (matchesCategory && matchesColor) {
+                record.classList.add('visible');
+            } else {
+                record.classList.remove('visible');
+            }
+        });
+    }
+
+    categoryFilter.addEventListener('change', applyFilters);
+    colorFilter.addEventListener('change', applyFilters);
+</script>
+
+</body>
+</html>
